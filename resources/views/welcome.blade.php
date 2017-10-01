@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Hind:400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400i" rel="stylesheet">
     <!-- Bootstrap core CSS-->
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    {{ HTML::style('assets/css/') }}
     <!-- Icon Fonts-->
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/linea-arrows.css" rel="stylesheet">
