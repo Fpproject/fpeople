@@ -16,24 +16,24 @@
     <link href="https://fonts.googleapis.com/css?family=Hind:400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400i" rel="stylesheet">
     <!-- Bootstrap core CSS-->
-    {{ HTML::style('assets/css/') }}
+    <link href="{{ URL::asset('assets/css/bootstrap.css') }}" rel="stylesheet">
     <!-- Icon Fonts-->
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/linea-arrows.css" rel="stylesheet">
-    <link href="assets/css/linea-icons.css" rel="stylesheet">
-    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="{{ URL::asset('assets/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('assets/css/linea-arrows.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('assets/css/linea-icons.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('assets/css/animate.css') }}" rel="stylesheet">
     <!-- Plugins-->
-    <link rel="stylesheet" type="text/css" href="assets/plugins/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="assets/plugins/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/plugins/slick/slick.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/plugins/slick/slick-theme.css') }}"/>
     <!-- Template core CSS-->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="{{ URL::asset('assets/css/style.css') }}" rel="stylesheet">
 </head>
 <body>
 
 <header>
     <div class="col logo-big">
         <div class="head-box">
-            <img class='img-responsive' src='assets/images/logo.png' />
+            <img class='img-responsive' src='assets/images/logo.png'/>
         </div>
     </div>
     <nav class="navbar navbar-toggleable-md navbar-inverse no-padding">
@@ -144,7 +144,6 @@
                                                 <li>August 18, 2016</li>
                                             </ul>
                                             <h2 class="post-title"><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
-
                                         </div>
                                         <div class="post-more"><a href="#">Read More →</a></div>
                                     </div>
@@ -300,11 +299,11 @@
 </div>
 
 <!-- Scripts-->
-<script type="text/javascript" src="assets/js/jquery-2.2.4.min.js"></script>
-<script type="text/javascript" src="assets/js/tether.min.js"></script>
-<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{ URL::asset('assets/js/jquery-2.2.4.min.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('assets/js/tether.min.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('assets/js/bootstrap.js') }}"></script>
 <!-- Script plugins-->
-<script type="text/javascript" charset="utf-8" src="assets/plugins/slick/slick.js"></script>
+<script type="text/javascript" charset="utf-8" src="{{ URL::asset('assets/plugins/slick/slick.js') }}"></script>
 
 
 <script type="text/javascript">
