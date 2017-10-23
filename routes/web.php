@@ -14,3 +14,27 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/fashion', function () {
+    return view('fashion');
+});
+
+Route::get('/beauty', function(){
+   return view('beauty');
+});
+Route::get('/lifestyle', function () {
+    return view('lifestyle');
+});
+
+Route::get('/snatch', function(){
+    return view('snatch');
+});
+
+Route::get('/potrait', function () {
+    return view('potrait');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
