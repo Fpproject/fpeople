@@ -26,6 +26,7 @@
                 <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/create') }}"><i class="fa fa-files-o"></i> <span>Create</span></a></li>
                 <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/welcome') }}"><i class="fa fa-files-o"></i> <span>Edit</span></a></li>
                 <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/welcome') }}"><i class="fa fa-files-o"></i> <span>Delete</span></a></li>
+                <li><a href="{{ url('admin/tag') }}"><i class="fa fa-tag"></i> <span>Manage Tags</span></a></li>
             </ul>
             <!--==============CRUD==========-->
             <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/elfinder') }}"><i class="fa fa-files-o"></i> <span>File manager</span></a></li>

@@ -18,7 +18,7 @@
                         <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/eqZjFKwjT94?autoplay=1&rel=0&showinfo=0&autohide=1'">
                             <div class="title-vid">NEXT VIDEO:</div>
                             <div class="thumb">
-                                <img src="http://img.youtube.com/vi/eqZjFKwjT94/0.jpg" alt="" />
+                                <img src="http://img.youtube.com/vi/P7XO9DiBkQ0/0.jpg" alt="" />
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                                 <!-- Post-->
                                 <div class="row">
                                     <article class="post col-md-6 col-lg-12">
-                                        <div class="post-preview" style="background-image: url('assets/images/000000430014.jpg')></div>
+                                        <div class="post-preview" style="background-image: url('assets/images/000000430014.jpg')"></div>
                                     <div class="post-wrapper">
                                         <div class="post-header">
                                             <ul class="post-meta h5">

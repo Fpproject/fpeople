@@ -24,7 +24,10 @@
     <link href="{{ URL::asset('assets/css/animate.css') }}" rel="stylesheet">
     <!-- Plugins-->
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/plugins/slick/slick.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/plugins/slick/slick-theme.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/plugins/slick/slick-theme.css') }}"/>    
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="{{ URL::asset('assets/plugins/owlcarousel/assets/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/plugins/owlcarousel/assets/owl.theme.default.min.css') }}">
     <!-- Template core CSS-->
     <link href="{{ URL::asset('assets/css/style.css') }}" rel="stylesheet">
 </head>
@@ -190,12 +193,13 @@
 <script type="text/javascript" src="{{ URL::asset('assets/js/bootstrap.js') }}"></script>
 <!-- Script plugins-->
 <script type="text/javascript" charset="utf-8" src="{{ URL::asset('assets/plugins/slick/slick.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('assets/plugins/owlcarousel/owl.carousel.js') }}"></script>
 
 
 <script type="text/javascript">
     $(document).on('ready', function() {
 
-        var divHeight = $('.col-1').height();
+        var divHeight = $('.col-1').height(); 
         $('.col-2').css('height', divHeight+'px');
 
         $("#slider-home").slick({
@@ -203,7 +207,62 @@
             infinite: true,
             centerMode: true,
             slidesToShow: 1
-        });
+          });
+
+        $('[data-toggle="offcanvas"]').click(function () {
+            $('.row-offcanvas').toggleClass('active')
+          });
+
+        // reference for main items
+          var slider = $('#slider');
+          // reference for thumbnail items
+          var thumbnailSlider = $('#thumbnailSlider');
+          //transition time in ms
+          var duration = 500;
+
+          // carousel function for main slider
+          slider.owlCarousel({
+           loop:false,
+           nav:false,
+           items:1
+          }).on('changed.owl.carousel', function (e) {
+           //On change of main item to trigger thumbnail item
+           thumbnailSlider.trigger('to.owl.carousel', [e.item.index, duration, true]);
+          });
+
+          // carousel function for thumbnail slider
+          thumbnailSlider.owlCarousel({
+           loop:false,
+           center:true, //to display the thumbnail item in center
+           nav:false,
+           responsive:{
+            0:{
+             items:3
+            },
+            600:{
+             items:4
+            },
+            1000:{
+             items:6
+            }
+           }
+          }).on('click', '.owl-item', function () {
+           // On click of thumbnail items to trigger same main item
+           slider.trigger('to.owl.carousel', [$(this).index(), duration, true]);
+
+          }).on('changed.owl.carousel', function (e) {
+           // On change of thumbnail item to trigger main item
+           slider.trigger('to.owl.carousel', [e.item.index, duration, true]);
+          });
+
+
+          //These two are navigation for main items
+          $('.slider-right').click(function() {
+           slider.trigger('next.owl.carousel');
+          });
+          $('.slider-left').click(function() {
+           slider.trigger('prev.owl.carousel');
+          });
 
 
 
