@@ -31,6 +31,7 @@
 
 html {
     font-size: 100%;
+    background: #000;
 }
 
 body {
@@ -790,11 +791,56 @@ p.card-title-jumbo {
     border-bottom: 1px solid #fff;
     margin-bottom: 10px;
 }
+.about-text{
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+}
 
+h2.about-title {
+    text-align: right;
+    border-top: 1px solid #9c9c9c;
+    border-bottom: 1px solid #9c9c9c;
+    padding: 20px 0px;
+    font-family: ChronicleDisp-Light;
+    text-transform: uppercase;
+    color: #9c9c9c;
+    letter-spacing: 5px;
+}
 
-@media only screen and (min-width: 1200px){}
-@media (max-width: 1199px) and (min-width: 992px){}
-@media (max-width: 991px) and (min-width: 769px){}
+.about-bottom h2 {
+    margin-top: 50px;
+    font-family: ChronicleDisp-LightItal;
+    font-size: 20px;
+    border-top: 1px solid #b3b3b3;
+    padding-top: 20px;
+}
+
+.about-bottom p {
+    text-align: justify
+}
+
+@media only screen and (min-width: 1200px){
+    .about-text{
+        -moz-column-count: 2;
+      -webkit-column-count: 2;
+      column-count: 2;
+    }
+}
+@media (max-width: 1199px) and (min-width: 992px){
+    .about-text{
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+@media (max-width: 991px) and (min-width: 769px){
+    .about-text{
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
 @media (max-width: 768px) and (min-width: 576px){
     ul.navbar-nav.icon-medsos {
         display: block!important;
