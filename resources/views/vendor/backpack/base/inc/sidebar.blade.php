@@ -21,22 +21,47 @@
           <!-- ================================================dashboard===== -->
             <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/dashboard') }}"><i class="fa fa-dashboard"></i> <span>{{ trans('backpack::base.dashboard') }}</span></a></li>
             <!---=====Recommended place for admin menu items ==== filemanager============-->
-            <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/welcome') }}"><i class="fa fa-files-o"></i> <span>CRUD</span></a></li>
-            <ul>
-                <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/create') }}"><i class="fa fa-files-o"></i> <span>Create</span></a></li>
-                <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/welcome') }}"><i class="fa fa-files-o"></i> <span>Edit</span></a></li>
-                <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/welcome') }}"><i class="fa fa-files-o"></i> <span>Delete</span></a></li>
-                <li><a href="{{ url('admin/tag') }}"><i class="fa fa-tag"></i> <span>Manage Tags</span></a></li>
-            </ul>
+            
+            <li class="treeview">
+<!--                <a href="{{ url(config('backpack.base.route_prefix', 'admin').'/welcome') }}"><i class="fa fa-files-o"></i> -->
+                <a href="#">
+                    <i class="fa fa-files-o"></i> 
+                    <span>CRUD</span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/create') }}"><i class="fa fa-files-o"></i> <span>Create</span></a></li>
+                    <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/welcome') }}"><i class="fa fa-files-o"></i> <span>Edit</span></a></li>
+                    <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/welcome') }}"><i class="fa fa-files-o"></i> <span>Delete</span></a></li>
+                    <li><a href="{{ url('admin/tag') }}"><i class="fa fa-tag"></i> <span>Manage Tags</span></a></li>
+                </ul>
+            </li>
+            
             <!--==============CRUD==========-->
             <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/elfinder') }}"><i class="fa fa-files-o"></i> <span>File manager</span></a></li>
 	      <!-- ================================================Setting============== -->
 	        <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/setting') }}"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
           <!-- ======================================= -->
-	        <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/language') }}"><i class="fa fa-flag-o"></i> <span>Languages</span></a></li>
-            <ul>
-	  <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/language/texts') }}"><i class="fa fa-language"></i> <span>Language Files</span></a></li>
-            </ul>
+	        <li class="treeview">
+                <a href="{#">
+                    <i class="fa fa-flag-o"></i> 
+                    <span>Languages</span>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                      <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/language') }}">
+                          <i class="fa fa-flag-o"></i> 
+                          <span>Languages</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/language/texts') }}">
+                          <i class="fa fa-language"></i> 
+                          <span>Language Files</span>
+                      </a>
+                    </li>
+                </ul>
+            </li>
+            
 	  <!-- ======PageManager -->
 	  <li><a href="{{ url(config('backpack.base.route_prefix').'/page') }}"><i class="fa fa-file-o"></i> <span>Pages</span></a></li>
 
